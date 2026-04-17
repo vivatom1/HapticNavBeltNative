@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#121212"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Haptic Nav Belt"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Not Connected"
+        android:textSize="18sp"
+        android:textColor="#FF5252"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Connect Belt"
+        android:backgroundTint="#4CAF50"
+        android:textSize="20sp"
+        android:layout_marginBottom="24dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center">
+
+        <!-- Top Row -->
+        <Space android:layout_width="80dp" android:layout_height="80dp"/>
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="F"
+            android:textSize="24sp"
+            android:backgroundTint="#2196F3" />
+        <Space android:layout_width="80dp" android:layout_height="80dp"/>
+
+        <!-- Middle Row -->
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="L"
+            android:textSize="24sp"
+            android:backgroundTint="#2196F3" />
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="S"
+            android:textSize="24sp"
+            android:backgroundTint="#F44336" />
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="R"
+            android:textSize="24sp"
+            android:backgroundTint="#2196F3" />
+
+        <!-- Bottom Row -->
+        <Space android:layout_width="80dp" android:layout_height="80dp"/>
+        <Button
+            android:id="@+id/btnHazard"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="H"
+            android:textSize="24sp"
+            android:backgroundTint="#FF9800" />
+        <Space android:layout_width="80dp" android:layout_height="80dp"/>
+
+    </GridLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <Button
+        android:id="@+id/btnVoice"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Voice Input (Navigate)"
+        android:backgroundTint="#9C27B0"
+        android:textSize="20sp" />
+
+</LinearLayout>
