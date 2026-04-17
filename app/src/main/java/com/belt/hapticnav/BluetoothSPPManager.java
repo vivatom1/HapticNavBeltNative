@@ -55,10 +55,11 @@ public class BluetoothSPPManager {
         }
 
         bluetoothAdapter.cancelDiscovery();
+        final BluetoothDevice finalEsp32Device = esp32Device;
 
         new Thread(() -> {
             try {
-                bluetoothSocket = esp32Device.createRfcommSocketToServiceRecord(SPP_UUID);
+                bluetoothSocket = finalEsp32Device.createRfcommSocketToServiceRecord(SPP_UUID);
                 bluetoothSocket.connect();
                 outputStream = bluetoothSocket.getOutputStream();
                 callback.onConnectionStateChanged(true, "Connected to ESP32_Belt");
