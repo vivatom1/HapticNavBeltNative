@@ -23,10 +23,17 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --stacktrace > build.log 2>&1 || true
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: haptic-nav-belt-apk
         path: app/build/outputs/apk/debug/app-debug.apk
+      continue-on-error: true
+
+    - name: Upload Logs
+      uses: actions/upload-artifact@v4
+      with:
+        name: gradle-logs
+        path: build.log
